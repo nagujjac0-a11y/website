@@ -59,8 +59,7 @@
 
     nav {
       margin-top: 1rem;
-      padding: px
-      ;
+      
     }
 
     nav ul {
@@ -242,7 +241,44 @@
 
     }
 
-    .pic{
-      width: 1000px;
-      height: auto;
-    }
+    
+
+/* ===== Shared additions for all pages ===== */
+.brand-logo-slot img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+/* Pages with only a main column fill the full width */
+.container > main:only-child { grid-column: 1 / -1; }
+
+nav a[aria-current="page"] { color: #99ccff; border-bottom: 2px solid #99ccff; }
+
+main h3 { color: #003366; font-size: 1.25rem; margin: 1.5rem 0 0.75rem; }
+main h4 { color: #003366; font-size: 1.05rem; margin-bottom: 0.4rem; }
+main ul { margin: 0 0 1.2rem 1.5rem; color: #444444; }
+main li { margin-bottom: 0.4rem; }
+main a { color: #006699; }
+main a:hover { color: #003366; }
+
+.about-image { margin-bottom: 1.5rem; text-align: center; }
+.about-image img { max-width: 100%; height: auto; border-radius: 6px; }
+.image-caption { font-size: 0.85rem; color: #666666; font-style: italic; text-align: center !important; margin-top: 0.4rem; }
+
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+.info-card { background: #f4f7f9; border-top: 4px solid #003366; border-radius: 8px; padding: 1.2rem; }
+.info-card h3, .info-card h4 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.info-card p { margin: 0; font-size: 0.92rem; text-align: left; }
+
+.notice { background: #e6f0fa; border-left: 4px solid #006699; padding: 0.8rem 1rem; border-radius: 4px; font-size: 0.9rem; text-align: left !important; }
+
+.site-form { display: flex; flex-direction: column; gap: 0.5rem; max-width: 560px; margin-bottom: 1.5rem; }
+.site-form label { font-weight: 600; color: #003366; font-size: 0.9rem; }
+.site-form input, .site-form textarea { padding: 0.6rem 0.8rem; border: 1px solid #99a9b8; border-radius: 4px; font: inherit; }
+.site-form input:focus, .site-form textarea:focus { outline: 2px solid #006699; border-color: #006699; }
+.site-form button { align-self: flex-start; margin-top: 0.5rem; background: #003366; color: #ffffff; border: 0; padding: 0.7rem 1.6rem; border-radius: 4px; font-weight: 600; cursor: pointer; }
+.site-form button:hover { background: #004080; }
+
+.issue-list { list-style: none; margin-left: 0; }
+.issue-list li { background: #f4f7f9; border-left: 4px solid #003366; padding: 0.8rem 1rem; border-radius: 4px; }
+.issue-list span { color: #666666; font-size: 0.9rem; }
+
+/* Keep body images inside the content area (replaces fixed 1000px width) */
+.pic { max-width: 100%; height: auto; }
