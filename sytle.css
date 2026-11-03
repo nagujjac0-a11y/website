@@ -1,0 +1,248 @@
+ /* CSS Reset & General Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #222222;
+      background-color: #f4f7f9;
+    }
+
+    /* Header & Navigation Bar */
+    header {
+      background-color: #003366;
+      color: #ffffff;
+      padding: 1.2rem 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .brand-logo-slot {
+      width: 70px;
+      height: 70px;
+      background-color: #ffffff;
+      color: #003366;
+      border: 2px dashed #99ccff;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 5px;
+    }
+
+    .brand-title h1 {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .brand-title span {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: #b3d9ff;
+    }
+
+    nav {
+      margin-top: 1rem;
+      padding: px
+      ;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 4px 8px;
+      transition: color 0.2s ease-in-out;
+      text-align: left;
+      
+    }
+
+    nav a:hover {
+      color: #99ccff;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #004080;
+      min-width: 150px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 100;
+      border-radius: 4px;
+      margin-top: 4px;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+
+    /* Page Layout Grid */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 2.2fr 1fr;
+      gap: 2rem;
+    }
+
+    /* Main Article Content */
+    main {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    main h2 {
+      color: #003366;
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+      border-bottom: 3px solid #003366;
+      padding-bottom: 0.4rem;
+    }
+
+    main p {
+      margin-bottom: 1.2rem;
+      color: #444444;
+      text-align: justify;
+      font-size: 1rem;
+    }
+
+    /* Image Slots / Placeholders */
+    .image-slot {
+      background-color: #e9ecef;
+      border: 2px dashed #003366;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #003366;
+      text-align: center;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      min-height: 250px;
+    }
+
+    .image-slot.small {
+      min-height: 180px;
+    }
+
+    .image-slot span {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .image-slot p {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    /* Sidebar Content */
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .toll-free-box {
+      background-color: #e6f0fa;
+      border: 2px solid #006699;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .toll-free-box h4 {
+      color: #003366;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    .toll-free-number {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #006699;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      border-top: 4px solid #003366;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #003366;
+      color: #ffffff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 850px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .logo{
+        top: 25px;
+      }
+       
+    
+
+    }
+
+    .pic{
+      width: 1000px;
+      height: auto;
+    }
